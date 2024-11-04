@@ -280,7 +280,31 @@ figure {
 .c-header .c-header__inner .c-header-right .c-header__items li.hoverUnderline a {
   text-decoration: none;
 }
-
+.c-header .c-header__inner .c-header-right .c-header__items li:nth-child(3) {
+  padding-right: 20px;
+}
+.c-header .c-header__inner .c-header-right .c-header__items li:nth-child(3):hover {
+  transition: all 0.3s;
+}
+.c-header .c-header__inner .c-header-right .c-header__items li:nth-child(3):hover::before {
+  content: "";
+  display: block;
+  transform-origin: center;
+  transform: rotate(-180deg) translateY(-10px);
+}
+.c-header .c-header__inner .c-header-right .c-header__items li:nth-child(3)::before {
+  content: "";
+  background-image: url(../img/ico-down.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 14px;
+  height: 8px;
+  right: 0;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
 .c-header
   .c-header__inner
   .c-header-right
@@ -309,12 +333,13 @@ figure {
 }
 .c-header .c-header__inner .c-header-right .c-header__items li.hoverUnderline .submenu li {
   text-align: center;
-  width: 226px;
+  width: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 58px;
   margin-top: 2px;
+
   background-color: #fafafa;
 }
 .c-header
@@ -328,10 +353,35 @@ figure {
 }
 .c-header .c-header__inner .c-header-right .c-header__items li.hoverUnderline .submenu li a {
   text-align: center;
-  color: #e9514e;
+  color: #000;
   font-size: 16px;
 }
-
+.c-header .c-header__inner .c-header-right .c-header__items li .submenu li:nth-child(3) {
+  padding-right: 0;
+}
+.c-header .c-header__inner .c-header-right .c-header__items li .submenu li:nth-child(3):hover {
+  transition: all 0.3s;
+}
+.c-header .c-header__inner .c-header-right .c-header__items li .submenu li:nth-child(3):hover::before {
+  content: "";
+  display: none;
+  transform-origin: center;
+  transform: rotate(-180deg) translateY(-10px);
+}
+.c-header .c-header__inner .c-header-right .c-header__items li .submenu li:nth-child(3):nth-child(3)::before {
+  content: "";
+  background-image: url(../img/ico-down.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: absolute;
+  width: 14px;
+  height: 8px;
+  right: 0;
+  transform: translateY(10px);
+  transition: 0.5s;
+  display: none;
+}
 .c-header
   .c-header__inner
   .c-header-right
@@ -473,6 +523,16 @@ figure {
 }
 .hamburger-menu .hamburger-menu-list li a {
   text-decoration: none;
+}
+.hamburger-menu .hamburger-menu-list li ul{
+  margin-left: 10px;
+  font-size: 20px;
+}
+.hamburger-menu .hamburger-menu-list li ul li a{
+  font-size: 14px;
+}
+.hamburger-menu .hamburger-menu-list li ul li{
+  padding-top: 10px;
 }
 .hamburger-menu .hamburger-menu-list img {
   text-decoration: none;
@@ -5818,7 +5878,6 @@ figure {
   font-size: 16px;
   font-weight: bold;
   font-family: Noto Sans JP;
-  transition: all 0.3s;
 }
 .gradient_button:hover {
   background-image: linear-gradient(to left, #f76934, #f76934, #fec969);
@@ -5921,8 +5980,6 @@ figure {
   align-items: center;
   gap: 31px;
   text-decoration: none;
-  transition: all 0.3s;
-  border: 1px solid #000000;
 }
 .contact_button a:hover {
   background-color: #fff;
@@ -11086,8 +11143,5 @@ button[disabled].prevBtn, button[disabled].nextBtn {
   }
   #detail .p-newsmain .__container .p-newsmain-rightblock{
     margin-top: 50px;
-  }
-  #swiperSlider {
-    transform: translateX(15%);
   }
 }
