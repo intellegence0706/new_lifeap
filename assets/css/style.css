@@ -2014,6 +2014,17 @@ figure {
   color: #fafafa;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1450980392);
 }
+#about .p-message .__container .__message-ctn .socialbtn{
+  background-image: url("../img/social_twi.png");
+  position: absolute;
+  width: 58px;
+  height: 78px;
+  background-size: contain;
+  background-repeat: no-repeat;
+ left: 50%;
+ bottom:10%;
+ transform: translate(-50%,-10%);
+}
 @media screen and (max-width: 769px) {
   #about .p-message .__container .__message-ctn .__ctn-ttl {
     font-size: 23px;
